@@ -1,0 +1,18 @@
+h1 Characters#index
+p Find me in app/views/characters/index.html.slim
+
+h1 Characters by Film
+
+- @characters_by_film.each do |film, characters|
+  h2 = film
+  ul
+    - characters.each do |character|
+      li
+        strong Name:
+        = character['name']
+        br
+        strong Mass:
+        = character['mass']
+        br
+        strong Homeworld:
+        = character['homeworld_name']

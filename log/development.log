@@ -1,0 +1,306 @@
+Started GET "/backoffice/delivery_claims?locale=en" for ::1 at 2023-11-15 14:28:42 +0100
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/backoffice/delivery_claims"):
+  
+Started GET "/b" for ::1 at 2023-11-15 14:28:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/b"):
+  
+Started GET "/" for ::1 at 2023-11-15 14:28:46 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/soulphysician/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/soulphysician/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 293)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2553)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:42:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 571.6ms | Allocations: 103020)
+Completed 200 OK in 577ms (Views: 573.2ms | ActiveRecord: 0.0ms | Allocations: 107305)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:43:51 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2616)
+
+
+  
+NameError (uninitialized constant CharactersController::SwapiService
+
+    service = SwapiService.new
+              ^^^^^^^^^^^^):
+  
+app/controllers/characters_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2023-11-15 14:44:06 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 12819ms (ActiveRecord: 0.0ms | Allocations: 5536)
+
+
+  
+NoMethodError (undefined method `get_characters' for #<HTTParty::Response:0x11990 parsed_response={"count"=>82, "next"=>"https://swapi.dev/api/people/?page=2", "previous"=>nil, "results"=>[{"name"=>"Luke Skywalker", "height"=>"172", "mass"=>"77", "hair_color"=>"blond", "skin_color"=>"fair", "eye_color"=>"blue", "birth_year"=>"19BBY", "gender"=>"male", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/6/"], "species"=>[], "vehicles"=>["https://swapi.dev/api/vehicles/14/", "https://swapi.dev/api/vehicles/30/"], "starships"=>["https://swapi.dev/api/starships/12/", "https://swapi.dev/api/starships/22/"], "created"=>"2014-12-09T13:50:51.644000Z", "edited"=>"2014-12-20T21:17:56.891000Z", "url"=>"https://swapi.dev/api/people/1/"}, {"name"=>"C-3PO", "height"=>"167", "mass"=>"75", "hair_color"=>"n/a", "skin_color"=>"gold", "eye_color"=>"yellow", "birth_year"=>"112BBY", "gender"=>"n/a", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/4/", "https://swapi.dev/api/films/5/", "https://swapi.dev/api/films/6/"], "species"=>["https://swapi.dev/api/species/2/"], "vehicles"=>[], "starships"=>[], "created"=>"2014-12-10T15:10:51.357000Z", "edited"=>"2014-12-20T21:17:50.309000Z", "url"=>"https://swapi.dev/api/people/2/"}, {"name"=>"R2-D2", "height"=>"96", "mass"=>"32", "hair_color"=>"n/a", "skin_color"=>"white, blue", "eye_color"=>"red", "birth_year"=>"33BBY", "gender"=>"n/a", "homeworld"=>"https://swapi.dev/api/planets/8/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/4/", "https://swapi.dev/api/films/5/", "https://swapi.dev/api/films/6/"], "species"=>["https://swapi.dev/api/species/2/"], "vehicles"=>[], "starships"=>[], "created"=>"2014-12-10T15:11:50.376000Z", "edited"=>"2014-12-20T21:17:50.311000Z", "url"=>"https://swapi.dev/api/people/3/"}, {"name"=>"Darth Vader", "height"=>"202", "mass"=>"136", "hair_color"=>"none", "skin_color"=>"white", "eye_color"=>"yellow", "birth_year"=>"41.9BBY", "gender"=>"male", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/6/"], "species"=>[], "vehicles"=>[], "starships"=>["https://swapi.dev/api/starships/13/"], "created"=>"2014-12-10T15:18:20.704000Z", "edited"=>"2014-12-20T21:17:50.313000Z", "url"=>"https://swapi.dev/api/people/4/"}, {"name"=>"Leia Organa", "height"=>"150", "mass"=>"49", "hair_color"=>"brown", "skin_color"=>"light", "eye_color"=>"brown", "birth_year"=>"19BBY", "gender"=>"female", "homeworld"=>"https://swapi.dev/api/planets/2/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/6/"], "species"=>[], "vehicles"=>["https://swapi.dev/api/vehicles/30/"], "starships"=>[], "created"=>"2014-12-10T15:20:09.791000Z", "edited"=>"2014-12-20T21:17:50.315000Z", "url"=>"https://swapi.dev/api/people/5/"}, {"name"=>"Owen Lars", "height"=>"178", "mass"=>"120", "hair_color"=>"brown, grey", "skin_color"=>"light", "eye_color"=>"blue", "birth_year"=>"52BBY", "gender"=>"male", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/5/", "https://swapi.dev/api/films/6/"], "species"=>[], "vehicles"=>[], "starships"=>[], "created"=>"2014-12-10T15:52:14.024000Z", "edited"=>"2014-12-20T21:17:50.317000Z", "url"=>"https://swapi.dev/api/people/6/"}, {"name"=>"Beru Whitesun lars", "height"=>"165", "mass"=>"75", "hair_color"=>"brown", "skin_color"=>"light", "eye_color"=>"blue", "birth_year"=>"47BBY", "gender"=>"female", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/5/", "https://swapi.dev/api/films/6/"], "species"=>[], "vehicles"=>[], "starships"=>[], "created"=>"2014-12-10T15:53:41.121000Z", "edited"=>"2014-12-20T21:17:50.319000Z", "url"=>"https://swapi.dev/api/people/7/"}, {"name"=>"R5-D4", "height"=>"97", "mass"=>"32", "hair_color"=>"n/a", "skin_color"=>"white, red", "eye_color"=>"red", "birth_year"=>"unknown", "gender"=>"n/a", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/"], "species"=>["https://swapi.dev/api/species/2/"], "vehicles"=>[], "starships"=>[], "created"=>"2014-12-10T15:57:50.959000Z", "edited"=>"2014-12-20T21:17:50.321000Z", "url"=>"https://swapi.dev/api/people/8/"}, {"name"=>"Biggs Darklighter", "height"=>"183", "mass"=>"84", "hair_color"=>"black", "skin_color"=>"light", "eye_color"=>"brown", "birth_year"=>"24BBY", "gender"=>"male", "homeworld"=>"https://swapi.dev/api/planets/1/", "films"=>["https://swapi.dev/api/films/1/"], "species"=>[], "vehicles"=>[], "starships"=>["https://swapi.dev/api/starships/12/"], "created"=>"2014-12-10T15:59:50.509000Z", "edited"=>"2014-12-20T21:17:50.323000Z", "url"=>"https://swapi.dev/api/people/9/"}, {"name"=>"Obi-Wan Kenobi", "height"=>"182", "mass"=>"77", "hair_color"=>"auburn, white", "skin_color"=>"fair", "eye_color"=>"blue-gray", "birth_year"=>"57BBY", "gender"=>"male", "homeworld"=>"https://swapi.dev/api/planets/20/", "films"=>["https://swapi.dev/api/films/1/", "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/4/", "https://swapi.dev/api/films/5/", "https://swapi.dev/api/films/6/"], "species"=>[], "vehicles"=>["https://swapi.dev/api/vehicles/38/"], "starships"=>["https://swapi.dev/api/starships/48/", "https://swapi.dev/api/starships/59/", "https://swapi.dev/api/starships/64/", "https://swapi.dev/api/starships/65/", "https://swapi.dev/api/starships/74/"], "created"=>"2014-12-10T16:16:29.192000Z", "edited"=>"2014-12-20T21:17:50.325000Z", "url"=>"https://swapi.dev/api/people/10/"}]}, @response=#<Net::HTTPOK 200 OK readbody=true>, @headers={"server"=>["nginx/1.16.1"], "date"=>["Wed, 15 Nov 2023 13:44:19 GMT"], "content-type"=>["application/json"], "transfer-encoding"=>["chunked"], "connection"=>["close"], "vary"=>["Accept, Cookie"], "x-frame-options"=>["SAMEORIGIN"], "etag"=>["\"b493126da505af6fec015ec116fec193\""], "allow"=>["GET, HEAD, OPTIONS"], "strict-transport-security"=>["max-age=15768000"]}>):
+  
+app/controllers/characters_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2023-11-15 14:45:01 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 14647)
+Completed 200 OK in 21558ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 23889)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:48:39 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2545)
+
+
+  
+NameError (uninitialized constant CharactersController::SwapiService
+
+    service = SwapiService.new
+              ^^^^^^^^^^^^):
+  
+app/controllers/characters_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2023-11-15 14:48:47 +0100
+Processing by CharactersController#index as HTML
+Started GET "/" for ::1 at 2023-11-15 14:49:37 +0100
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 335)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 15610)
+Completed 200 OK in 142874ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 50117)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:51:10 +0100
+Started GET "/" for ::1 at 2023-11-15 14:51:10 +0100
+Processing by CharactersController#index as HTML
+Processing by CharactersController#index as HTML
+Processing by CharactersController#index as HTML
+Started GET "/" for ::1 at 2023-11-15 14:51:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 330)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 15604)
+Completed 200 OK in 86752ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 105480)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3171)
+Completed 200 OK in 89569ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 114065)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3157)
+Completed 200 OK in 98327ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 118737)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:53:22 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 426)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 37468)
+Completed 200 OK in 120847ms (Views: 82.5ms | ActiveRecord: 0.0ms | Allocations: 78637)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:53:49 +0100
+Processing by CharactersController#index as HTML
+Started GET "/" for ::1 at 2023-11-15 14:54:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as HTML
+Started GET "/" for ::1 at 2023-11-15 14:54:33 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3375)
+Completed 200 OK in 105620ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 101071)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3159)
+Completed 200 OK in 116381ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 63909)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 426)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 38044)
+Completed 200 OK in 81196ms (Views: 65.0ms | ActiveRecord: 0.0ms | Allocations: 101987)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2489)
+Completed 200 OK in 104004ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 112131)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:56:49 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2631)
+
+
+  
+NameError (uninitialized constant CharactersController::SwapiService
+
+    service = SwapiService.new
+              ^^^^^^^^^^^^):
+  
+app/controllers/characters_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2023-11-15 14:56:58 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 14778)
+Completed 200 OK in 25349ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 27046)
+
+
+Started GET "/" for ::1 at 2023-11-15 14:58:52 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2361)
+
+
+  
+NameError (undefined local variable or method `url' for #<Swapi:0x000000010a54f910 @options={}>
+
+    Rails.cache.fetch(url, expires_in: 12.hours) do
+                      ^^^
+Did you mean?  URI):
+  
+app/services/swapi.rb:16:in `get_characters'
+app/controllers/characters_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2023-11-15 14:59:06 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 14743)
+Completed 200 OK in 41329ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 26914)
+
+
+Started GET "/" for ::1 at 2023-11-15 15:00:42 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 2298)
+Completed 200 OK in 43836ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 12997)
+
+
+Started GET "/" for ::1 at 2023-11-15 15:05:33 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 331)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 14632)
+Completed 200 OK in 28207ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 26822)
+
+
+Started GET "/" for ::1 at 2023-11-15 15:07:54 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 35770ms (ActiveRecord: 0.0ms | Allocations: 17058)
+
+
+  
+NoMethodError (undefined method `organize_characters_by_film' for #<Swapi:0x000000010a40f078 @options={}>
+
+    characters_by_film = organize_characters_by_film(characters, films)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^):
+  
+app/services/swapi.rb:26:in `fetch_characters_and_films'
+app/services/swapi.rb:10:in `call'
+app/services/application_service.rb:9:in `call'
+app/controllers/characters_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2023-11-15 15:08:32 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 14782)
+Completed 200 OK in 24767ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 31022)
+
+
+Started GET "/" for ::1 at 2023-11-15 15:10:21 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 330)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 14650)
+Completed 200 OK in 29399ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 30758)
+
+
+Started GET "/" for ::1 at 2023-11-15 15:13:16 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 27202ms (ActiveRecord: 0.0ms | Allocations: 18484)
+
+
+  
+NameError (undefined local variable or method `characters_by_film' for #<CharactersController:0x00000000028618>
+
+    @sorted_characters_by_film = characters_by_film.sort_by do |film_title, _|
+                                 ^^^^^^^^^^^^^^^^^^
+Did you mean?  @characters_by_film):
+  
+app/controllers/characters_controller.rb:5:in `index'
+Started GET "/" for ::1 at 2023-11-15 15:13:59 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 36014ms (ActiveRecord: 0.0ms | Allocations: 18346)
+
+
+  
+NameError (undefined local variable or method `characters_by_film' for #<CharactersController:0x0000000002bcf0>
+
+      characters_by_film[film_title].first['films'].map { |url| films[url][:release_date] }.min
+      ^^^^^^^^^^^^^^^^^^
+Did you mean?  @characters_by_film):
+  
+app/controllers/characters_controller.rb:6:in `block in index'
+app/controllers/characters_controller.rb:5:in `each'
+app/controllers/characters_controller.rb:5:in `sort_by'
+app/controllers/characters_controller.rb:5:in `index'
+Started GET "/" for ::1 at 2023-11-15 15:14:47 +0100
+Processing by CharactersController#index as HTML
+Completed 500 Internal Server Error in 32470ms (ActiveRecord: 0.0ms | Allocations: 18398)
+
+
+  
+NameError (undefined local variable or method `films' for #<CharactersController:0x0000000002f3c8>
+
+      @characters_by_film[film_title].first['films'].map { |url| films[url][:release_date] }.min
+                                                                 ^^^^^):
+  
+app/controllers/characters_controller.rb:6:in `block (2 levels) in index'
+app/controllers/characters_controller.rb:6:in `map'
+app/controllers/characters_controller.rb:6:in `block in index'
+app/controllers/characters_controller.rb:5:in `each'
+app/controllers/characters_controller.rb:5:in `sort_by'
+app/controllers/characters_controller.rb:5:in `index'
+Started GET "/" for ::1 at 2023-11-15 15:15:39 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 14717)
+Completed 200 OK in 46338ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 31021)
+
+
+Started GET "/" for ::1 at 2023-11-15 15:19:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as HTML
